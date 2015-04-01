@@ -1,0 +1,15 @@
+# Landing page configuration
+#
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name collabify.space www.collabify.space;
+
+	access_log /var/log/nginx/landing.access.log;
+
+	location / {
+		root /home/ubuntu/Landing/src;
+		index index.html;
+	}
+}
