@@ -9,7 +9,7 @@ server {
 	access_log /var/log/nginx/landing.access.log;
 
 	location / {
-		root /home/ubuntu/Landing/src;
+		root /home/ubuntu/landing;
 		index index.html;
 	}
 }
