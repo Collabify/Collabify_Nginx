@@ -1,0 +1,19 @@
+# REST endpoints server configuration
+#
+
+upstream endpoint_nodes {
+	server localhost:1337;
+}
+
+server {
+	listen 1337;
+	listen [::]:1337;
+
+	server_name collabify.space www.collabify.space;
+
+	access_log /var/log/nginx/endpoints.access.log;
+
+	location / {
+		proxy_pass http://endpoint_nodes;
+	}
+}
