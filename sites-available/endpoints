@@ -2,12 +2,12 @@
 #
 
 upstream endpoint_nodes {
-	server localhost:1337;
+	server localhost:1338;
 }
 
 server {
-	listen 1338;
-	listen [::]:1338;
+	listen 1337;
+	listen [::]:1337;
 
 	server_name collabify.space www.collabify.space;
 
